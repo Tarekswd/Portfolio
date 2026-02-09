@@ -1,14 +1,14 @@
 const experiences = [
   {
-    period: "2022 — Present",
+    period: "2024 — Present",
     role: "Senior Frontend Engineer",
     company: "Freelance",
-    description: "Leading frontend and backend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Nest.js", "GraphQL", "Github", "PostgreSQL"],
+    description: " Made many comprehensive projects for clients, including a real-time chat application, an file transfer platform, and a personal portfolio website. Led frontend development using React, TypeScript, and Tailwind CSS, ensuring responsive design and optimal performance.",
+    technologies: ["React", "TypeScript", "Nest.js", "GraphQL", "Github", "PostgreSQL","Tailwind CSS", "Docker","Godot", "Gdscript" ],
     current: true,
   },
   {
-    period: "2024 — Present",
+    period: "2025 — Present",
     role: "Game Developer",
     company: "Freelance",
     description: "Building a 2D action-adventure game using Godot and Gdscript. Responsible for game design, mechanics, and implementation. The game is currently in early access with positive player feedback.",
@@ -53,7 +53,7 @@ export const Experience = () => {
            animate-fade-in animation-delay-200"
           >
             A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            junior engineer and game developer, showcasing the skills and impact I've made along.
           </p>
         </div>
 

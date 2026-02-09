@@ -14,19 +14,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "tarek.ahmadieh@gmail.com",
+    href: "mailto:tarek.ahmadieh@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+961 76 447 535",
+    href: "tel:+96176447535",
   },
+
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Mount Lebanon, Lebanon",
     href: "#",
   },
 ];
@@ -243,7 +244,7 @@ export const Contact = () => {
               </div>
               <p className="text-muted-foreground text-sm">
                 I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
+                  If you have something in mind, don't hesitate to reach out. I'm always eager to collaborate and create amazing things together.
                 let's talk!
               </p>
             </div>
