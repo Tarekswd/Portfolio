@@ -1,45 +1,11 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+
+
   {
-    title: "Fintech Dashboard",
-    description:
-<<<<<<< Updated upstream
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "AI Writing Assistant",
-    description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
-=======
-      "Real-time chat application using React, NestJS, PostgreSQL, and WebSockets. Implemented authentication, real-time messaging, and database-backed user sessions.",
+    title: "Webchat",
+    description: "Real-time chat application using React, NestJS, PostgreSQL, and WebSockets. Implemented authentication, real-time messaging, and database-backed user sessions.",
     image: `${import.meta.env.BASE_URL}projects/project1.png`,
     tags: ["React", "Typescript", "NodeJS"],
     link: "#",
@@ -64,7 +30,6 @@ const projects = [
     github: "#",
   },
 
->>>>>>> Stashed changes
 ];
 
 export const Projects = () => {
