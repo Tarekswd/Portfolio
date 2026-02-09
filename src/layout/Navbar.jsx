@@ -9,6 +9,8 @@ const navLinks = [
   { href: "#testimonials", label: "Testimonials" },
 ];
 
+
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,15 +33,11 @@ export const Navbar = () => {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="text-xl font-bold tracking-tight hover:text-primary animate-fade-in animation-delay-200 flex items-center gap-2"
         >
-<<<<<<< Updated upstream
-          PM<span className="text-primary">.</span>
-=======
           TA<span className="text-primary">.
             <div className=" animate-bounce inline-flex items-center gap-4">
               <img src={`${import.meta.env.BASE_URL}usopp.jpg`} alt="Logo" className="w-12 h-12 rounded-full ml-1"></img></div></span>
->>>>>>> Stashed changes
         </a>
 
         {/* Desktop Nav */}
@@ -59,13 +57,9 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-<<<<<<< Updated upstream
-          <Button size="sm">Contact Me</Button>
-=======
           <Button size="sm">
             <a href="#contact">
               Contact Me</a></Button>
->>>>>>> Stashed changes
         </div>
 
         {/* Mobile Menu Button */}
