@@ -92,14 +92,14 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-<<<<<<< Updated upstream
+
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
-=======
+              </AnimatedBorderButton>
               <Button size="lg" >
                 <a href="#contact">
                   Contact Me <ArrowRight className="w-5 h-5" />
@@ -109,7 +109,7 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 <a href="#projects">
                   Check my work</a>
->>>>>>> Stashed changes
+Stashed changes
               </AnimatedBorderButton>
             </div>
 
@@ -117,15 +117,13 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-<<<<<<< Updated upstream
+
                 { icon: Github, href: "#" },
                 { icon: Linkedin, href: "#" },
                 { icon: Twitter, href: "#" },
-=======
+
                 { icon: Github, href: "https://github.com/Tarekswd" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/" },
-
->>>>>>> Stashed changes
               ].map((social, idx) => (
                 <a
                   key={idx}
