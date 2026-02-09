@@ -25,16 +25,21 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+        }  z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
+<<<<<<< Updated upstream
           PM<span className="text-primary">.</span>
+=======
+          TA<span className="text-primary">.
+            <div className=" animate-bounce inline-flex items-center gap-4">
+              <img src={`${import.meta.env.BASE_URL}usopp.jpg`} alt="Logo" className="w-12 h-12 rounded-full ml-1"></img></div></span>
+>>>>>>> Stashed changes
         </a>
 
         {/* Desktop Nav */}
@@ -54,7 +59,13 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
+<<<<<<< Updated upstream
           <Button size="sm">Contact Me</Button>
+=======
+          <Button size="sm">
+            <a href="#contact">
+              Contact Me</a></Button>
+>>>>>>> Stashed changes
         </div>
 
         {/* Mobile Menu Button */}

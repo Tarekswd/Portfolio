@@ -36,7 +36,7 @@ export const Hero = () => {
       {/* Bg */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.jpg"
+          src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -52,9 +52,8 @@ export const Hero = () => {
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20
+                }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -93,12 +92,24 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+<<<<<<< Updated upstream
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
+=======
+              <Button size="lg" >
+                <a href="#contact">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+              <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                <a href="#projects">
+                  Check my work</a>
+>>>>>>> Stashed changes
               </AnimatedBorderButton>
             </div>
 
@@ -106,9 +117,15 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
+<<<<<<< Updated upstream
                 { icon: Github, href: "#" },
                 { icon: Linkedin, href: "#" },
                 { icon: Twitter, href: "#" },
+=======
+                { icon: Github, href: "https://github.com/Tarekswd" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/" },
+
+>>>>>>> Stashed changes
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -132,7 +149,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
                   alt="Pedro Machado"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />

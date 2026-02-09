@@ -4,6 +4,7 @@ const projects = [
   {
     title: "Fintech Dashboard",
     description:
+<<<<<<< Updated upstream
       "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
     image: "/projects/project1.png",
     tags: ["React", "Typescript", "NodeJS"],
@@ -37,6 +38,33 @@ const projects = [
     link: "#",
     github: "#",
   },
+=======
+      "Real-time chat application using React, NestJS, PostgreSQL, and WebSockets. Implemented authentication, real-time messaging, and database-backed user sessions.",
+    image: `${import.meta.env.BASE_URL}projects/project1.png`,
+    tags: ["React", "Typescript", "NodeJS"],
+    link: "#",
+    github: "https://github.com/Tarekswd/webchat",
+  },
+  {
+    title: "File Converter ",
+    description:
+      "Full-stack web application for converting images, PDFs, and Office files. Built with NestJS, React, PostgreSQL, JWT authentication, and Dockerized backend. Integrated Sharp and PDF-Lib for file processing.",
+    image: `${import.meta.env.BASE_URL}projects/project2.png`,
+    tags: ["Nest.js", "TypeScript", "PostgreSQL", "Tailwind"],
+    link: "#",
+    github: "https://github.com/Tarekswd/file-converter",
+  },
+  {
+    title: "Dereled - A Mario like 2D Game",
+    description:
+      "A 2D platformer game inspired by Mario, built with Gdscript in the Godot Engine. Features player movement, collision detection, and level progression.",
+    image: `${import.meta.env.BASE_URL}projects/project3.png`,
+    tags: ["Gdscript", "Game development", "Godot Engine"],
+    link: "https://tatawek.itch.io/dereled",
+    github: "#",
+  },
+
+>>>>>>> Stashed changes
 ];
 
 export const Projects = () => {
