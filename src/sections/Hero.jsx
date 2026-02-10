@@ -79,7 +79,7 @@ export const Hero = () => {
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I am Tarek Al Ahmadieh — a software engineer specializing in
                 React, Nest.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                applications that users love . In addition to my technical skills, I have make video games using Godot and Gdscript, and I am passionate about creating engaging digital experiences that go beyond just functionality. Let's build something amazing together!
               </p>
             </div>
 
