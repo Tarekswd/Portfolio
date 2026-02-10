@@ -37,7 +37,7 @@ export const Navbar = () => {
         >
           TA<span className="text-primary">.
             <div className=" animate-bounce inline-flex items-center gap-4">
-              <img src="usopp.jpg" alt="Logo" className="w-12 h-12 rounded-full ml-1"></img></div></span>
+             </div></span>
         </a>
 
         {/* Desktop Nav */}
