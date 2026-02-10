@@ -1,7 +1,7 @@
 const experiences = [
   {
     period: "2024 — Present",
-    role: "Senior Frontend Engineer",
+    role: "junior Frontend Engineer",
     company: "Freelance",
     description: " Made many comprehensive projects for clients, including a real-time chat application, an file transfer platform, and a personal portfolio website. Led frontend development using React, TypeScript, and Tailwind CSS, ensuring responsive design and optimal performance.",
     technologies: ["React", "TypeScript", "Nest.js", "GraphQL", "Github", "PostgreSQL","Tailwind CSS", "Docker","Godot", "Gdscript" ],
