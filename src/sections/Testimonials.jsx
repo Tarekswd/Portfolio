@@ -93,11 +93,6 @@ export const Testimonials = () => {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <img
-                 
-                  alt={testimonials[activeIdx].author}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                />
                 <div>
                   <div className="font-semibold">
                     {testimonials[activeIdx].author}
