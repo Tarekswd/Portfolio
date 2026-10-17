@@ -83,7 +83,7 @@ export const Testimonials = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Main Testimonial */}
-            <div className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
+            <figure aria-live="polite" className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
               <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                 <Quote className="w-6 h-6 text-primary-foreground" />
               </div>
@@ -92,21 +92,23 @@ export const Testimonials = () => {
                 "{testimonials[activeIdx].quote}"
               </blockquote>
 
-              <div className="flex items-center gap-4">
+              <figcaption className="flex items-center gap-4">
                 <div>
-                  <div className="font-semibold">
+                  <cite className="font-semibold not-italic">
                     {testimonials[activeIdx].author}
-                  </div>
+                  </cite>
                   <div className="text-sm text-muted-foreground">
                     {testimonials[activeIdx].role}
                   </div>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
 
             {/* Testimonials Navigation */}
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
+                type="button"
+                aria-label="Previous testimonial"
                 className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                 onClick={previous}
               >
@@ -116,6 +118,10 @@ export const Testimonials = () => {
               <div className="flex gap-2">
                 {testimonials.map((_, idx) => (
                   <button
+                    key={idx}
+                    type="button"
+                    aria-label={`Show testimonial ${idx + 1}`}
+                    aria-current={idx === activeIdx}
                     onClick={() => setActiveIdx(idx)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
                       idx === activeIdx
@@ -127,6 +133,8 @@ export const Testimonials = () => {
               </div>
 
               <button
+                type="button"
+                aria-label="Next testimonial"
                 onClick={next}
                 className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >

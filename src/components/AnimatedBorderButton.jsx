@@ -1,9 +1,11 @@
-import { Download } from "lucide-react";
-
-export const AnimatedBorderButton = ({ children }) => {
+export const AnimatedBorderButton = ({ children, href, ...props }) => {
+  // Render a real link when given href: <a> inside <button> is invalid HTML.
+  const Tag = href ? "a" : "button";
   return (
-    <button
-      className="relative bg-transparent border border-border 
+    <Tag
+      href={href}
+      {...props}
+      className="inline-block relative bg-transparent border border-border 
         text-foreground hover:border-primary/50 transition-all 
         duration-1000 focus:outline-none focus-visible:ring-2 
         focus-visible:ring-primary focus-visible:ring-offset-2 
@@ -33,6 +35,6 @@ export const AnimatedBorderButton = ({ children }) => {
       <span className="relative z-10 flex items-center justify-center gap-2">
         {children}
       </span>
-    </button>
+    </Tag>
   );
 };

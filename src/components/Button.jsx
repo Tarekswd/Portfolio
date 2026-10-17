@@ -2,6 +2,7 @@ export const Button = ({
   className = "",
   size = "default",
   children,
+  href,
   ...props
 }) => {
   const baseClasses =
@@ -13,11 +14,12 @@ export const Button = ({
     lg: "px-8 py-4 text-lg",
   };
   const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+  const Tag = href ? "a" : "button";
   return (
-    <button className={classes} {...props}>
+    <Tag href={href} className={`inline-block ${classes}`} {...props}>
       <span className="relative flex items-center justify-center gap-2">
         {children}
       </span>
-    </button>
+    </Tag>
   );
 };

@@ -30,14 +30,13 @@ export const Navbar = () => {
       className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
         }  z-50`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav aria-label="Main" className="container mx-auto px-6 flex items-center justify-between">
         <a
-          href="#"
+          href="#home"
+          aria-label="Tarek Al Ahmadieh — home"
           className="text-xl font-bold tracking-tight hover:text-primary animate-fade-in animation-delay-200 flex items-center gap-2"
         >
-          TA<span className="text-primary">.
-            <div className=" animate-bounce inline-flex items-center gap-4">
-             </div></span>
+          TA<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
@@ -57,13 +56,16 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">
-            <a href="#contact">
-              Contact Me</a></Button>
+          <Button size="sm" href="#contact">
+            Contact Me
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
           className="md:hidden p-2 text-foreground cursor-pointer"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
@@ -86,7 +88,7 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <Button href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
               Contact Me
             </Button>
           </div>

@@ -4,8 +4,7 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
-  Download,
+  Gamepad2,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
@@ -21,16 +20,22 @@ const skills = [
   "Prisma",
   "Jest",
   "GitHub Actions",
+  "Python",
+  "PyTorch",
+  "C",
+  "Godot",
 ];
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" aria-label="Introduction" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0">
         <img
           src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
-          alt="Hero image"
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
@@ -61,7 +66,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Software Engineer • AI/ML • Game Dev
               </span>
             </div>
 
@@ -79,7 +84,9 @@ export const Hero = () => {
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I am Tarek Al Ahmadieh — a software engineer specializing in
                 React, Nest.js, and TypeScript. I build scalable, performant web
-                applications that users love . In addition to my technical skills, I have make video games using Godot and Gdscript, and I am passionate about creating engaging digital experiences that go beyond just functionality. Let's build something amazing together!
+                applications, research deep learning for medical imaging with
+                PyTorch, and ship indie games made with Godot. Let's build
+                something amazing together!
               </p>
             </div>
 
@@ -87,16 +94,11 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
 
          
-              <Button size="lg" >
-                <a href="#contact">
-                  Contact Me <ArrowRight className="w-5 h-5" />
-                </a>
+              <Button size="lg" href="#contact">
+                Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                <a href="#projects">
-                  Check my work</a>
-
+              <AnimatedBorderButton href="#projects">
+                Check my work
               </AnimatedBorderButton>
             </div>
 
@@ -106,21 +108,25 @@ export const Hero = () => {
               {[
 
 
-                { icon: Github, href: "https://github.com/Tarekswd" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/" },
+                { icon: Github, href: "https://github.com/Tarekswd", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/", label: "LinkedIn" },
+                { icon: Gamepad2, href: "https://tatawek.itch.io/", label: "itch.io" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label={social.label}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
-                  {<social.icon className="w-5 h-5" />}
+                  <social.icon className="w-5 h-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -132,7 +138,9 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
-                  alt="Tarek Al Ahmadieh"
+                  alt="Portrait of Tarek Al Ahmadieh, software engineer"
+                  width="448"
+                  height="560"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 

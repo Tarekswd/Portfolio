@@ -15,8 +15,14 @@ const experiences = [
     technologies: ["Godot", "Gdscript", "Game Design", "Level Design"],
     current: true,
   },
-
-
+  {
+    period: "2025 — Present",
+    role: "AI / ML Researcher",
+    company: "Independent",
+    description: "Deep learning research for medical imaging: 300M–500M parameter foundation architectures for BraTS 2021 brain tumor segmentation and MGMT radiogenomics, LLM agent reasoning for Gemma 4, and a top 4.7% Kaggle Playground finish.",
+    technologies: ["Python", "PyTorch", "MONAI", "TensorFlow", "XGBoost", "LightGBM", "CatBoost"],
+    current: true,
+  },
 ];
 
 export const Experience = () => {
