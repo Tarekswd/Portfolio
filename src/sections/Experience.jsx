@@ -1,5 +1,19 @@
 const experiences = [
   {
+    period: "Jun 2026 — Sep 2026",
+    role: "ML / Deep Learning Researcher",
+    company: "TogetherforChehim",
+    description: "Machine and deep learning classification of diabetic peripheral neuropathy from plantar pressure data, both binary and 4-class (GC, GD, NL, NS). Compared CatBoost, XGBoost, SVM, Random Forest and Linear Regression, trained a custom CNN with stratified 5-fold cross-validation, adapted ResNet-18 to multi-channel pressure maps, and explained predictions with SHAP, Grad-CAM, Grad-CAM++ and Occlusion Sensitivity.",
+    technologies: ["Machine Learning", "CNN", "CatBoost", "XGBoost", "ResNet-18", "SHAP", "Grad-CAM"],
+  },
+  {
+    period: "Apr 2026 — Jul 2026",
+    role: "Full Stack Web Development Intern",
+    company: "MednMind",
+    description: "Built the Admin Dashboard with a responsive frontend and backend APIs for user management, patient statistics and trial-period administration. Built the Report Page with date-range filtering and Revenue, Staff and Insurance reports, extending backend APIs and database queries.",
+    technologies: ["Full Stack", "Admin Dashboard", "Backend APIs", "Reporting"],
+  },
+  {
     period: "2024 — Present",
     role: "junior Frontend Engineer",
     company: "Freelance",
@@ -23,6 +37,21 @@ const experiences = [
     technologies: ["Python", "PyTorch", "MONAI", "TensorFlow", "XGBoost", "LightGBM", "CatBoost"],
     current: true,
   },
+  {
+    period: "Nov 2024 — Jul 2027 (expected)",
+    role: "Bachelor of Business Computer",
+    company: "Lebanese University — Faculty of Technology, Abey",
+    description: "Undergraduate degree combining computer science and business.",
+    technologies: ["Education"],
+    current: true,
+  },
+  {
+    period: "Jul 2024",
+    role: "High School Diploma",
+    company: "Chouf National College — Chouf, Mount Lebanon",
+    description: "Graduated high school.",
+    technologies: ["Education"],
+  },
 ];
 
 export const Experience = () => {
@@ -40,7 +69,7 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Experience &amp; Education
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
@@ -58,8 +87,8 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            junior engineer and game developer, showcasing the skills and impact I've made along.
+            My internship, research, freelance work and education, from
+            full-stack dashboards to medical machine learning and indie games.
           </p>
         </div>
 
