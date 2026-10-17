@@ -215,10 +215,14 @@ export const Projects = () => {
               <article className="group glass rounded-2xl overflow-hidden h-full">
                 {/* Image */}
                 <div className="relative overflow-hidden aspect-video">
-                  {project.image ? (
+                  {project.image || project.github ? (
                     <img
-                      src={project.image}
-                      alt={`${project.title} screenshot`}
+                      // Repos without a screenshot use their GitHub preview card, saved as public/projects/<repo>.png.
+                      src={
+                        project.image ||
+                        `${import.meta.env.BASE_URL}projects/${project.github.split("/").pop()}.png`
+                      }
+                      alt={`${project.title} preview`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

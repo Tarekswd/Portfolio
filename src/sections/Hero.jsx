@@ -26,6 +26,14 @@ const skills = [
   "Godot",
 ];
 
+// Generated once at load so the dots don't jump on every re-render.
+const dots = Array.from({ length: 30 }, () => ({
+  left: `${Math.random() * 100}%`,
+  top: `${Math.random() * 100}%`,
+  animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
+  animationDelay: `${Math.random() * 5}s`,
+}));
+
 export const Hero = () => {
   return (
     <section id="home" aria-label="Introduction" className="relative min-h-screen flex items-center overflow-hidden">
@@ -43,17 +51,11 @@ export const Hero = () => {
 
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
-            style={{
-              backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20
-                }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
+            style={{ backgroundColor: "#20B2A6", ...dot }}
           />
         ))}
       </div>
