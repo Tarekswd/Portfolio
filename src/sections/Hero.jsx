@@ -5,6 +5,7 @@ import {
   Github,
   Linkedin,
   Gamepad2,
+  Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
@@ -99,6 +100,13 @@ export const Hero = () => {
               <Button size="lg" href="#contact">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
+              <AnimatedBorderButton
+                href={`${import.meta.env.BASE_URL}Tarek-Al-Ahmadieh-CV.pdf`}
+                download
+              >
+                <Download className="w-5 h-5" aria-hidden="true" />
+                Download CV
+              </AnimatedBorderButton>
               <AnimatedBorderButton href="#projects">
                 Check my work
               </AnimatedBorderButton>
