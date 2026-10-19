@@ -13,19 +13,21 @@ import { useEffect, useRef } from "react";
  * @param {string} className - Additional CSS classes
  */
 export const AdBanner = ({
-  slotId = "",
-  client = import.meta.env.VITE_ADSENSE_CLIENT_ID || "",
+  slotId = "8127573814",
+  client = import.meta.env.VITE_ADSENSE_CLIENT_ID || "ca-pub-4478220415036057",
   format = "auto",
   responsive = "true",
   className = "",
 }) => {
   const adRef = useRef(null);
+  const pushedRef = useRef(false);
 
   useEffect(() => {
-    // Only attempt to push ad if an active AdSense client ID is present and script loaded
-    if (client && typeof window !== "undefined" && window.adsbygoogle) {
+    // Only attempt to push ad once per container when client ID and slot are present
+    if (client && slotId && typeof window !== "undefined" && !pushedRef.current) {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
+        pushedRef.current = true;
       } catch (err) {
         console.warn("Google AdSense push error:", err);
       }

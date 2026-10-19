@@ -7,6 +7,7 @@ import { Education } from "@/sections/Education";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "./layout/Footer";
 import { AdBanner } from "@/components/AdBanner";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -15,15 +16,16 @@ function App() {
       <main>
         <Hero />
         <About />
-        <AdBanner slotId="auto-top" />
+        <AdBanner slotId="8127573814" />
         <Projects />
-        <AdBanner slotId="auto-middle" />
+        <AdBanner slotId="8127573814" />
         <Experience />
         <Education />
-        <AdBanner slotId="auto-bottom" />
+        <AdBanner slotId="8127573814" />
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
