@@ -28,6 +28,13 @@ export const Footer = () => {
             </a>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Tarek Al Ahmadieh. All rights reserved.
+              {" "}
+              <a
+                href={`${import.meta.env.BASE_URL}privacy.html`}
+                className="underline underline-offset-2 hover:text-foreground transition-colors"
+              >
+                Privacy Policy
+              </a>
             </p>
           </div>
 
