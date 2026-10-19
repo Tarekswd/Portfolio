@@ -4,7 +4,7 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
+  Gamepad2,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
@@ -21,16 +21,33 @@ const skills = [
   "Prisma",
   "Jest",
   "GitHub Actions",
+  "Python",
+  "PyTorch",
+  "C",
+  "Godot",
+  "Machine Learning",
+  "Deep Learning",
+  "X86 Assembly"
 ];
+
+// Generated once at load so the dots don't jump on every re-render.
+const dots = Array.from({ length: 30 }, () => ({
+  left: `${Math.random() * 100}%`,
+  top: `${Math.random() * 100}%`,
+  animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
+  animationDelay: `${Math.random() * 5}s`,
+}));
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" aria-label="Introduction" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0">
         <img
           src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
-          alt="Hero image"
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
@@ -38,17 +55,11 @@ export const Hero = () => {
 
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
-            style={{
-              backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20
-                }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
+            style={{ backgroundColor: "#20B2A6", ...dot }}
           />
         ))}
       </div>
@@ -61,7 +72,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Software Engineer • AI/ML • Game Dev
               </span>
             </div>
 
@@ -78,8 +89,8 @@ export const Hero = () => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I am Tarek Al Ahmadieh — a software engineer specializing in
-                React, Nest.js, and TypeScript. I build scalable, performant web
-                applications that users love . In addition to my technical skills, I have make video games using Godot and Gdscript, and I am passionate about creating engaging digital experiences that go beyond just functionality. Let's build something amazing together!
+                React, Nest.js, TypeScript ,C  and python. I build scalable, performant web
+                applications, research machine learning, deep learning for medical imaging, and ship indie games.
               </p>
             </div>
 
@@ -87,16 +98,18 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
 
          
-              <Button size="lg" >
-                <a href="#contact">
-                  Contact Me <ArrowRight className="w-5 h-5" />
-                </a>
+              <Button size="lg" href="#contact">
+                Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                <a href="#projects">
-                  Check my work</a>
-
+              <AnimatedBorderButton
+                href={`${import.meta.env.BASE_URL}Tarek-Al-Ahmadieh-CV.pdf`}
+                download
+              >
+                <Download className="w-5 h-5" aria-hidden="true" />
+                Download CV
+              </AnimatedBorderButton>
+              <AnimatedBorderButton href="#projects">
+                Check my work
               </AnimatedBorderButton>
             </div>
 
@@ -106,21 +119,25 @@ export const Hero = () => {
               {[
 
 
-                { icon: Github, href: "https://github.com/Tarekswd" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/" },
+                { icon: Github, href: "https://github.com/Tarekswd", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/", label: "LinkedIn" },
+                { icon: Gamepad2, href: "https://tatawek.itch.io/", label: "itch.io" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label={social.label}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
-                  {<social.icon className="w-5 h-5" />}
+                  <social.icon className="w-5 h-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -132,7 +149,9 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
-                  alt="Tarek Al Ahmadieh"
+                  alt="Portrait of Tarek Al Ahmadieh, software engineer"
+                  width="448"
+                  height="560"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
@@ -148,7 +167,7 @@ export const Hero = () => {
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                   <div className="text-2xl font-bold text-primary">2+</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-xs text-primary">
                     Years Exp.
                   </div>
                 </div>

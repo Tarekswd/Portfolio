@@ -1,30 +1,45 @@
 const experiences = [
   {
-    period: "2024 — Present",
-    role: "junior Frontend Engineer",
-    company: "Freelance",
-    description: " Made many comprehensive projects for clients, including a real-time chat application, an file transfer platform, and a personal portfolio website. Led frontend development using React, TypeScript, and Tailwind CSS, ensuring responsive design and optimal performance.",
-    technologies: ["React", "TypeScript", "Nest.js", "GraphQL", "Github", "PostgreSQL","Tailwind CSS", "Docker","Godot", "Gdscript" ],
-    current: true,
+    period: "Jul 2026 — Oct 2026",
+    role: "Full Stack Developer Intern",
+    company: "MednMind",
+    description:
+      "Developed full-stack financial features with React, NestJS, TypeScript, and PostgreSQL (commission/salary settlements, running balances, and custom income/expense tracking). Built financial and patient reporting with cash-flow analytics and configurable date-range filtering. Implemented patient management workflows, diagnosis autocomplete, medicine suggestions, RBAC access control, patient groups, and per-organization WhatsApp tracking.",
+    technologies: ["React", "NestJS", "TypeScript", "PostgreSQL", "Prisma ORM", "RBAC", "Reporting"],
+  },
+  {
+    period: "Jun 2026 — Sep 2026",
+    role: "Machine & Deep Learning Project",
+    company: "TogetherforChehim",
+    description:
+      "Machine and deep learning classification of diabetic peripheral neuropathy from plantar pressure data, both binary and 4-class (GC, GD, NL, NS). Compared CatBoost, XGBoost, SVM, Random Forest, and Linear Regression. Designed and trained a custom CNN with Stratified 5-Fold Cross-Validation, adapted ResNet-18 to multi-channel pressure maps, and visualized model attention with SHAP, Grad-CAM, Grad-CAM++, and Occlusion Sensitivity.",
+    technologies: ["Python", "CNN", "ResNet-18", "CatBoost", "XGBoost", "SHAP", "Grad-CAM"],
+  },
+  {
+    period: "Apr 2026 — Jul 2026",
+    role: "Full Stack Web Development Intern",
+    company: "MednMind",
+    description:
+      "Developed the Admin Dashboard with responsive frontend and backend APIs for user management, patient statistics, and trial period administration. Built the Report Page with Revenue, Staff, and Insurance reports, creating frontend components and extending backend APIs and database queries.",
+    technologies: ["React", "NestJS", "TypeScript", "PostgreSQL", "Admin Dashboard", "Backend APIs"],
   },
   {
     period: "2025 — Present",
     role: "Game Developer",
     company: "Freelance",
-    description: "Building a 2D action-adventure game using Godot and Gdscript. Responsible for game design, mechanics, and implementation. The game is currently in early access with positive player feedback.",
-    technologies: ["Godot", "Gdscript", "Game Design", "Level Design"],
+    description:
+      "Designed and developed indie games using Godot and GDScript, including Dereled (a 2D Mario-inspired platformer with responsive mechanics and boss fights), Runeblade (a top-down survival adventure with pixel art), and Golfyio (a fast-paced action-RPG golf game with special abilities and combat). Responsible for game mechanics, physics, level design, and release.",
+    technologies: ["Godot", "GDScript", "Game Design", "Level Design", "2D Physics"],
     current: true,
   },
-
-
 ];
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section id="experience" aria-labelledby="experience-heading" className="py-32 relative overflow-hidden">
       <div
         className="absolute top-1/2 left-1/4 w-96
-       h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
+       h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"
       />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -37,6 +52,7 @@ export const Experience = () => {
             Career Journey
           </span>
           <h2
+            id="experience-heading"
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
@@ -52,8 +68,8 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            junior engineer and game developer, showcasing the skills and impact I've made along.
+            My internship, research, and freelance work, from full-stack
+            dashboards to medical machine learning and indie games.
           </p>
         </div>
 
