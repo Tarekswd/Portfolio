@@ -25,6 +25,9 @@ const skills = [
   "PyTorch",
   "C",
   "Godot",
+  "Machine Learning",
+  "Deep Learning",
+  "X86 Assembly"
 ];
 
 // Generated once at load so the dots don't jump on every re-render.
@@ -86,10 +89,8 @@ export const Hero = () => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I am Tarek Al Ahmadieh — a software engineer specializing in
-                React, Nest.js, and TypeScript. I build scalable, performant web
-                applications, research deep learning for medical imaging with
-                PyTorch, and ship indie games made with Godot. Let's build
-                something amazing together!
+                React, Nest.js, TypeScript ,C  and python. I build scalable, performant web
+                applications, research machine learning, deep learning for medical imaging, and ship indie games.
               </p>
             </div>
 
@@ -166,7 +167,7 @@ export const Hero = () => {
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                   <div className="text-2xl font-bold text-primary">2+</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-xs text-primary">
                     Years Exp.
                   </div>
                 </div>
