@@ -6,83 +6,95 @@ const GH = "https://github.com/Tarekswd";
 
 const projects = [
   {
-    title: "BraTS 2021 Multi-Paradigm Segmentation",
-    category: "AI / ML",
+    title: "File Converter",
+    category: "Web",
+    outcome: "15+ formats converted in <2s with NestJS, Sharp & Docker",
     description:
-      "PyTorch / MONAI implementation of a 300M-parameter foundation architecture for brain tumor segmentation that surpasses the BraTS 2021 benchmark, with zero-leakage cross-validation.",
-    tags: ["Python", "PyTorch", "MONAI", "Medical Imaging"],
-    github: `${GH}/brats2021-multiparadigm-segmentation`,
-  },
-  {
-    title: "BraTS 2021 MGMT Radiogenomics",
-    category: "AI / ML",
-    description:
-      "Research-grade deep learning with a 500M foundation architecture for pre-operative MGMT promoter methylation prediction in glioblastoma (BraTS 2021 Task 2).",
-    tags: ["Python", "Deep Learning", "Radiogenomics"],
-    github: `${GH}/brats2021-mgmt-radiogenomics`,
+      "Full-stack file conversion platform for images, documents, and PDFs featuring asynchronous processing, JWT authentication, and Dockerized microservices.",
+    image: `${import.meta.env.BASE_URL}projects/project2.png`,
+    tags: ["React", "NestJS", "TypeScript", "PostgreSQL", "Docker", "Sharp"],
+    github: `${GH}/file-converter`,
   },
   {
     title: "Kaggle Playground S6E9 — Top 4.7%",
     category: "AI / ML",
+    outcome: "Ranked 167 / 3,575 worldwide (0.94560 ROC-AUC)",
     description:
-      "Ranked 167 / 3,575 predicting EV purchases: synthetic-data forensics, leak-free in-fold target encoding and a LightGBM / XGBoost / CatBoost ensemble (0.94560 ROC-AUC).",
-    tags: ["Python", "LightGBM", "XGBoost", "CatBoost"],
+      "Ranked in top 4.7% globally predicting EV purchases: forensic synthetic-data feature engineering, leak-free target encoding, and an ensemble of LightGBM, CatBoost & XGBoost.",
+    tags: ["Python", "LightGBM", "XGBoost", "CatBoost", "Kaggle"],
     github: `${GH}/Koggle-Playground_Series_S6E9`,
-  },
-  {
-    title: "Neuropathy Detector",
-    category: "AI / ML",
-    description:
-      "Detects neuropathy per step and per patient by comparing SVM, random forest, XGBoost, CatBoost, a custom CNN and a transfer-learned ResNet-18.",
-    tags: ["Python", "scikit-learn", "CNN", "ResNet"],
-    github: `${GH}/neuropathy_detector`,
-  },
-  {
-    title: "File Converter",
-    category: "Web",
-    description:
-      "Full-stack app for converting images, PDFs and Office files. NestJS, React, PostgreSQL, JWT auth and a Dockerized backend using Sharp and PDF-Lib.",
-    image: `${import.meta.env.BASE_URL}projects/project2.png`,
-    tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
-    github: `${GH}/file-converter`,
   },
   {
     title: "Runeblade",
     category: "Games",
+    outcome: "Playable in-browser • Pixel-art survival adventure on itch.io",
     description:
-      "An action-packed top-down pixel-art survival adventure, playable in the browser.",
+      "Action-packed top-down survival game in Godot Engine featuring responsive combat physics, wave-based AI state machines, and real-time boss battles.",
     image: "https://img.itch.zone/aW1nLzI5OTMyODQ0LmpwZw==/315x250%23c/n0s9Lu.jpg",
-    tags: ["Godot", "GDScript", "Pixel Art"],
+    tags: ["Godot", "GDScript", "Pixel Art", "2D Physics"],
     link: "https://tatawek.itch.io/runeblade",
+    liveLabel: "Play Live",
+  },
+  {
+    title: "BraTS 2021 Multi-Paradigm Segmentation",
+    category: "AI / ML",
+    outcome: "Surpasses BraTS 2021 benchmark with 300M foundation architecture",
+    description:
+      "PyTorch / MONAI foundation architecture for 3D multi-parametric MRI brain tumor segmentation, verified under zero-leakage cross-validation.",
+    tags: ["Python", "PyTorch", "MONAI", "Medical Imaging"],
+    github: `${GH}/brats2021-multiparadigm-segmentation`,
   },
   {
     title: "Golfyio",
     category: "Games",
+    outcome: "Playable in-browser • Action-RPG golf physics hybrid",
     description:
-      "Fast-paced indie action RPG golf game with special abilities and combat.",
+      "Fast-paced indie action RPG combining golf trajectory physics with special player abilities, combat arenas, and gamepad support.",
     image: "https://img.itch.zone/aW1nLzI5NDMyMTgyLnBuZw==/315x250%23c/2PE3In.png",
-    tags: ["Godot", "GDScript", "Action RPG"],
+    tags: ["Godot", "GDScript", "Action RPG", "Physics"],
     link: "https://tatawek.itch.io/rpg-golfball",
+    liveLabel: "Play Live",
   },
   {
-    title: "HTTP Server",
+    title: "BraTS 2021 MGMT Radiogenomics",
+    category: "AI / ML",
+    outcome: "500M foundation model for pre-operative genomic prediction",
+    description:
+      "Research-grade deep learning architecture for non-invasive MGMT promoter methylation prediction in glioblastoma brain tumors (BraTS 2021 Task 2).",
+    tags: ["Python", "Deep Learning", "Radiogenomics", "Medical AI"],
+    github: `${GH}/brats2021-mgmt-radiogenomics`,
+  },
+  {
+    title: "Neuropathy Detector",
+    category: "AI / ML",
+    outcome: "Clinical 5-fold CV with ResNet-18 & SHAP/Grad-CAM interpretability",
+    description:
+      "Plantar pressure classification for diabetic neuropathy comparing CatBoost, XGBoost, custom CNNs, and transfer-learned ResNet-18 with clinical saliency maps.",
+    tags: ["Python", "scikit-learn", "CNN", "ResNet-18", "SHAP"],
+    github: `${GH}/neuropathy_detector`,
+  },
+  {
+    title: "HTTP Server in C",
     category: "Systems (C)",
-    description: "A simple HTTP server built entirely in C.",
-    tags: ["C", "Networking", "Sockets"],
+    outcome: "Zero-dependency high-concurrency server on Linux TCP sockets",
+    description:
+      "Complete HTTP/1.1 web server written entirely from scratch in C, implementing POSIX socket operations, HTTP request parsing, and response formatting.",
+    tags: ["C", "Linux Sockets", "TCP/IP", "Networking"],
     github: `${GH}/http_server`,
   },
   {
-    title: "QR Code Generator",
+    title: "QR Code Generator in C",
     category: "Systems (C)",
+    outcome: "Native CLI PNG generator with zero external library footprint",
     description:
-      "QR code generator in C using Nayuki's QR library and TinyPngOut.",
-    tags: ["C", "Image Encoding"],
+      "Fast command-line QR matrix encoder in pure C leveraging Nayuki's algorithm and TinyPngOut for binary image rendering.",
+    tags: ["C", "Image Encoding", "Algorithms"],
     github: `${GH}/QR_Code_Generator`,
   },
 ];
 
 const categories = ["All", ...new Set(projects.map((p) => p.category))];
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 6;
 
 const getProjectImage = (project) => {
   if (project.image) return project.image;
@@ -287,6 +299,12 @@ export const Projects = () => {
                                     {project.title}
                                   </span>
                                 )}
+                                {project.outcome && (
+                                  <div className="text-[11px] text-primary/90 font-medium flex items-center gap-1.5 mt-0.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary/70 shrink-0" />
+                                    <span className="truncate max-w-[280px] sm:max-w-none">{project.outcome}</span>
+                                  </div>
+                                )}
                                 {/* Mobile subtitle */}
                                 <div className="sm:hidden flex flex-wrap items-center gap-2 mt-1">
                                   <span className="text-[11px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
@@ -328,6 +346,19 @@ export const Projects = () => {
                           {/* Links */}
                           <td className="py-4 px-6 align-middle text-right">
                             <div className="flex items-center justify-end gap-2">
+                              {project.link && (
+                                <a
+                                  href={project.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`Play / View live demo for ${project.title}`}
+                                  title="Open live link"
+                                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-primary/15 hover:bg-primary text-primary hover:text-primary-foreground border border-primary/30 text-xs font-semibold transition-all shadow-sm"
+                                >
+                                  <span>{project.liveLabel || "Live"}</span>
+                                  <ArrowUpRight className="w-3.5 h-3.5" />
+                                </a>
+                              )}
                               {project.github && (
                                 <a
                                   href={project.github}
@@ -338,18 +369,6 @@ export const Projects = () => {
                                   className="p-2 rounded-lg glass text-muted-foreground hover:text-primary-foreground hover:bg-primary transition-all duration-200"
                                 >
                                   <Github className="w-4 h-4" />
-                                </a>
-                              )}
-                              {project.link && (
-                                <a
-                                  href={project.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  aria-label={`Play / View ${project.title}`}
-                                  title="Play on itch.io"
-                                  className="p-2 rounded-lg glass text-muted-foreground hover:text-primary-foreground hover:bg-primary transition-all duration-200"
-                                >
-                                  <ArrowUpRight className="w-4 h-4" />
                                 </a>
                               )}
                             </div>
@@ -488,20 +507,39 @@ export const Projects = () => {
                               {project.category}
                             </span>
                           </div>
+                          {project.outcome && (
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 text-xs font-medium mb-3">
+                              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+                              {project.outcome}
+                            </div>
+                          )}
                           <p className="text-muted-foreground text-sm">
                             {project.description}
                           </p>
                         </div>
-                        <ul className="flex flex-wrap gap-2 pt-2" aria-label="Technologies">
-                          {project.tags.map((tag) => (
-                            <li
-                              key={tag}
-                              className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground"
+                        <div className="space-y-3 pt-2">
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 rounded-xl bg-primary/15 hover:bg-primary text-primary hover:text-primary-foreground border border-primary/30 text-xs font-semibold transition-all shadow-sm group/btn"
                             >
-                              {tag}
-                            </li>
-                          ))}
-                        </ul>
+                              <span>{project.liveLabel || "Play Live"}</span>
+                              <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                            </a>
+                          )}
+                          <ul className="flex flex-wrap gap-1.5" aria-label="Technologies">
+                            {project.tags.map((tag) => (
+                              <li
+                                key={tag}
+                                className="px-3 py-1 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground"
+                              >
+                                {tag}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </article>
                   </li>

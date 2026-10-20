@@ -1,4 +1,4 @@
-import { Github, Linkedin, Gamepad2 } from "lucide-react";
+import { Github, Linkedin, Gamepad2, MapPin } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Tarekswd", label: "GitHub" },
@@ -20,15 +20,26 @@ export const Footer = () => {
   return (
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
+        {/* Trust & Availability Details */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 mb-8 border-b border-border/40 text-xs sm:text-sm">
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <MapPin className="w-4 h-4 text-primary shrink-0" />
+            <span>Mount Lebanon, Lebanon • Available Globally (UTC+3 / Remote)</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full glass border border-primary/20 text-xs font-medium text-foreground">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span>Open for Full-Stack &amp; Contract Roles</span>
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <a href="#home" className="text-xl font-bold tracking-tight">
-              TA<span className="text-primary">.</span>
+            <a href="#home" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
+              Tatawek<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Tarek Al Ahmadieh. All rights reserved.
-              {" "}
+              © {currentYear} Tarek Al Ahmadieh. All rights reserved.{" "}
               <a
                 href={`${import.meta.env.BASE_URL}privacy.html`}
                 className="underline underline-offset-2 hover:text-foreground transition-colors"

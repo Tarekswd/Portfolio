@@ -72,7 +72,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • AI/ML • Game Dev
+                Full-Stack Developer • AI/ML • Systems &amp; Games
               </span>
             </div>
 
@@ -88,9 +88,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I am Tarek Al Ahmadieh — a software engineer specializing in
-                React, Nest.js, TypeScript ,C  and python. I build scalable, performant web
-                applications, research machine learning, deep learning for medical imaging, and ship indie games.
+                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong> (known online as <span className="text-primary font-medium">Tatawek</span>) — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
               </p>
             </div>
 

@@ -191,6 +191,33 @@ export const Contact = () => {
       return;
     }
 
+    // Explicit client-side validation for all modes (including Preview mode)
+    if (!formData.name.trim()) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter your name.",
+      });
+      return;
+    }
+
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a message before sending.",
+      });
+      setActiveTab("write");
+      setTimeout(() => textareaRef.current?.focus(), 50);
+      return;
+    }
+
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
 
@@ -271,7 +298,7 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form Card */}
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+          <div className="glass p-5 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Spam Honeypot */}
               <input
@@ -338,7 +365,7 @@ export const Contact = () => {
                         setMessageMode("plain");
                         setActiveTab("write");
                       }}
-                      className={`px-2.5 py-1 rounded-md transition-all font-medium ${
+                      className={`px-2 sm:px-2.5 py-1 rounded-md transition-all font-medium text-[11px] sm:text-xs ${
                         messageMode === "plain"
                           ? "bg-primary text-primary-foreground shadow-sm"
                           : "text-muted-foreground hover:text-foreground"
@@ -349,7 +376,7 @@ export const Contact = () => {
                     <button
                       type="button"
                       onClick={() => setMessageMode("markdown")}
-                      className={`px-2.5 py-1 rounded-md transition-all font-medium ${
+                      className={`px-2 sm:px-2.5 py-1 rounded-md transition-all font-medium text-[11px] sm:text-xs ${
                         messageMode === "markdown"
                           ? "bg-primary text-primary-foreground shadow-sm"
                           : "text-muted-foreground hover:text-foreground"
@@ -360,7 +387,7 @@ export const Contact = () => {
                     <button
                       type="button"
                       onClick={() => setMessageMode("html")}
-                      className={`px-2.5 py-1 rounded-md transition-all font-medium ${
+                      className={`px-2 sm:px-2.5 py-1 rounded-md transition-all font-medium text-[11px] sm:text-xs ${
                         messageMode === "html"
                           ? "bg-primary text-primary-foreground shadow-sm"
                           : "text-muted-foreground hover:text-foreground"
@@ -373,8 +400,8 @@ export const Contact = () => {
 
                 {/* Rich Formatting Toolbar (when Markdown or HTML selected) */}
                 {messageMode !== "plain" && (
-                  <div className="flex items-center justify-between gap-2 p-2 rounded-xl bg-surface/80 border border-border/40 text-xs">
-                    <div className="flex items-center gap-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2 p-2 rounded-xl bg-surface/80 border border-border/40 text-xs">
+                    <div className="flex items-center gap-1 overflow-x-auto max-w-full py-0.5">
                       <button
                         type="button"
                         onClick={() => handleInsertFormatting("bold")}
@@ -418,7 +445,7 @@ export const Contact = () => {
                     </div>
 
                     {/* Write vs Preview Tab Toggle */}
-                    <div className="flex items-center gap-1 bg-surface px-1.5 py-0.5 rounded-lg border border-border/40">
+                    <div className="flex items-center gap-1 bg-surface px-1.5 py-0.5 rounded-lg border border-border/40 shrink-0 ml-auto sm:ml-0">
                       <button
                         type="button"
                         onClick={() => setActiveTab("write")}
@@ -521,7 +548,7 @@ export const Contact = () => {
 
           {/* Contact Information & Availability */}
           <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
+            <div className="glass rounded-3xl p-6 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information
               </h3>
@@ -547,7 +574,7 @@ export const Contact = () => {
             </div>
 
             {/* Availability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
+            <div className="glass rounded-3xl p-6 sm:p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium">Currently Available</span>

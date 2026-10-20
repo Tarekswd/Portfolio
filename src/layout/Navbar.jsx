@@ -33,10 +33,15 @@ export const Navbar = () => {
       <nav aria-label="Main" className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#home"
-          aria-label="Tarek Al Ahmadieh — home"
-          className="text-xl font-bold tracking-tight hover:text-primary animate-fade-in animation-delay-200 flex items-center gap-2"
+          aria-label="Tatawek — Tarek Al Ahmadieh, Full-Stack Developer"
+          className="group flex items-center gap-2.5 animate-fade-in animation-delay-200"
         >
-          TA<span className="text-primary">.</span>
+          <span className="text-xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
+            Tatawek<span className="text-primary">.</span>
+          </span>
+          <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-primary/10 text-primary border border-primary/20">
+            Full-Stack Developer
+          </span>
         </a>
 
         {/* Desktop Nav */}
