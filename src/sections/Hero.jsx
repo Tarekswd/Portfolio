@@ -78,7 +78,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences with
@@ -87,8 +87,8 @@ export const Hero = () => {
                   precision.
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong>  — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
+              <p className="text-base sm:text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong> — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
               </p>
             </div>
 
@@ -154,18 +154,18 @@ export const Hero = () => {
                 />
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">
+                <div className="absolute -bottom-3 sm:-bottom-4 -right-2 sm:-right-4 glass rounded-xl px-3 sm:px-4 py-2 sm:py-3 animate-float shadow-lg">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-xs sm:text-sm font-medium">
                       Available for work
                     </span>
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">2+</div>
-                  <div className="text-xs text-primary">
+                <div className="absolute -top-3 sm:-top-4 -left-2 sm:-left-4 glass rounded-xl px-3 sm:px-4 py-2 sm:py-3 animate-float animation-delay-500 shadow-lg">
+                  <div className="text-xl sm:text-2xl font-bold text-primary">2+</div>
+                  <div className="text-[11px] sm:text-xs text-primary">
                     Years Exp.
                   </div>
                 </div>

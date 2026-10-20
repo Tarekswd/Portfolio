@@ -56,42 +56,44 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200 leading-relaxed text-sm sm:text-base">
               <p>
-                I am a full-stack software engineer and deep learning researcher with over 2 years
-                of hands-on development experience. My primary web stack is built on{" "}
-                <strong className="text-foreground font-semibold">React</strong>,{" "}
-                <strong className="text-foreground font-semibold">TypeScript</strong>,{" "}
+                I am a full-stack software engineer and machine learning researcher with over 2 years
+                of hands-on development experience. My work bridges responsive frontend architecture with
+                high-throughput backend services, robust relational database modeling, and applied deep learning.
+              </p>
+
+              <p>
+                During my software engineering internships at <strong className="text-foreground font-semibold">MednMind</strong>,
+                I engineered production financial settlement features, real-time cash-flow reporting, patient care workflows,
+                and role-based access control (RBAC) using <strong className="text-foreground font-semibold">React</strong>,{" "}
                 <strong className="text-foreground font-semibold">NestJS</strong>,{" "}
-                <strong className="text-foreground font-semibold">Prisma ORM</strong>, and{" "}
-                <strong className="text-foreground font-semibold">PostgreSQL</strong>. During my internships
-                at <strong className="text-foreground font-semibold">MednMind</strong>, I engineered core financial
-                settlement features, cash-flow analytics, detailed patient workflows, and role-based access control (RBAC).
+                <strong className="text-foreground font-semibold">TypeScript</strong>, and{" "}
+                <strong className="text-foreground font-semibold">PostgreSQL</strong>.
               </p>
 
               <p>
-                In the AI domain, I focus on clinical and medical imaging challenges. With{" "}
-                <strong className="text-foreground font-semibold">TogetherforChehim</strong>, I developed CNN and
-                ResNet-18 transfer learning models to classify diabetic peripheral neuropathy from plantar pressure maps,
-                evaluating them with stratified cross-validation and explainable AI (SHAP, Grad-CAM, and Occlusion Sensitivity).
-                I also reproduced winning foundation architectures for the <strong className="text-foreground font-semibold">BraTS 2021</strong> brain
-                tumor segmentation benchmark and earned a <strong className="text-foreground font-semibold">Top 4.7% rank on Kaggle</strong> (Playground S6E9)
-                with a multi-model ensemble (LightGBM, CatBoost, XGBoost).
-              </p>
-
-              <p>
-                Beyond high-level web frameworks, I love low-level systems programming in{" "}
-                <strong className="text-foreground font-semibold">C</strong> and{" "}
-                <strong className="text-foreground font-semibold">x86 Assembly</strong>, having built custom HTTP servers
-                on Linux TCP sockets and command-line PNG QR encoders. I also design and ship indie 2D games using{" "}
-                <strong className="text-foreground font-semibold">Godot &amp; GDScript</strong>, with titles such as{" "}
-                <em className="text-foreground">Dereled</em>, <em className="text-foreground">Runeblade</em>, and{" "}
-                <em className="text-foreground">Golfyio</em> published on itch.io.
+                Beyond full-stack web applications, I have a deep passion for low-level systems programming in{" "}
+                <strong className="text-foreground font-semibold">C</strong>, exploratory deep learning research in medical
+                diagnostics, and designing indie game mechanics in <strong className="text-foreground font-semibold">Godot</strong>.
+                I approach every project with an emphasis on clean architecture, verifiable benchmarks, and real-world utility.
               </p>
 
               <p>
                 Currently completing my <strong className="text-foreground font-semibold">Bachelor of Business Computer</strong> at{" "}
                 the <strong className="text-foreground font-semibold">Lebanese University (Faculty of Technology, Abey)</strong>,
-                I combine rigorous engineering fundamentals with sharp business and problem-solving insight.
+                I combine rigorous computer science fundamentals with practical business problem solving.
               </p>
+
+              <div className="pt-2">
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors group"
+                >
+                  <span className="underline underline-offset-4 group-hover:text-primary">
+                    See featured engineering projects &amp; benchmarks below
+                  </span>
+                  <span className="group-hover:translate-y-0.5 transition-transform">&darr;</span>
+                </a>
+              </div>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
