@@ -88,7 +88,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong> (known online as <span className="text-primary font-medium">Tatawek</span>) — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
+                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong>  — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
               </p>
             </div>
 
