@@ -1,0 +1,37 @@
+# Tarek Al Ahmadieh — Full Stack Software Engineer, AI/ML Researcher & Game Developer
+
+> Portfolio: https://tatawek.com/
+> Contact: tarek.ahmadieh@gmail.com | Phone: +961 76 447 535
+> Location: Mount Lebanon, Lebanon (Available Globally / Remote)
+> GitHub: https://github.com/Tarekswd
+> LinkedIn: https://www.linkedin.com/in/tarek-ahmadieh-05b4a3227/
+> itch.io: https://tatawek.itch.io/
+
+## Professional Overview
+Tarek Al Ahmadieh is a full-stack software engineer, deep learning researcher, and indie game developer. He specializes in building high-performance web applications, financial and healthcare management platforms, AI-driven medical diagnostic systems, and interactive 2D games.
+
+## Services Available for Clients & Employers
+- **Full-Stack Web Application Development**: Custom web applications, SaaS platforms, internal admin dashboards, and RESTful/WebSocket APIs using React, TypeScript, NestJS, Tailwind CSS, PostgreSQL, and Prisma ORM.
+- **AI & Deep Learning Solutions**: Computer vision (CNNs, ResNet, U-Net, Swin UNETR), tabular ensembles (LightGBM, CatBoost, XGBoost), explainable AI (SHAP, Grad-CAM), and model evaluation with stratified cross-validation.
+- **Indie Game Development**: 2D action/adventure games, physics mechanics, level design, and web/cross-platform deployment using Godot Engine and GDScript.
+- **Systems & Low-Level Programming**: Custom HTTP servers, image processing algorithms, and CLI utilities in C and Linux TCP sockets.
+
+## Key Projects
+- **BraTS 2021 Brain Tumor Segmentation**: PyTorch/MONAI 3D U-Net baseline, 5 epochs on the 1,251 training cases: 80.5 / 62.9 / 66.2 Dice (WT / TC / ET) on a 25% patient-level hold-out.
+- **BraTS 2021 MGMT Radiogenomics**: Gated-Attention MIL on pre-operative MRI, 0.566 ± 0.039 ROC-AUC in 5-fold cross-validation.
+- **Kaggle Playground S6E9 — Top 4.7%**: Ranked 167 of 3,575 predicting EV purchases using leak-free target encoding and LightGBM/CatBoost/XGBoost ensemble.
+- **Diabetic Neuropathy Classification (TogetherforChehim)**: Plantar-pressure classification using CNNs, ResNet-18 transfer learning, and Grad-CAM interpretability.
+- **MednMind Full-Stack Dashboard & Financial Reporting**: Healthcare administration platform with RBAC, revenue analytics, and patient workflows.
+- **Indie Games on itch.io**: Runeblade, Golfyio, and Dereled (built with Godot and GDScript).
+- **HTTP Server & QR Code Generator**: High-performance socket server and QR generator written in C.
+
+## Technical Skills
+- **Languages**: JavaScript (ES6+), TypeScript, Python, C, Assembly x86, GDScript, SQL, HTML5, CSS3.
+- **Frontend**: React, Tailwind CSS, Vite, Responsive Design, State Management, UI/UX.
+- **Backend & Databases**: Nest.js, Node.js, PostgreSQL, Prisma ORM, WebSockets, REST APIs.
+- **AI / Machine Learning**: PyTorch, MONAI, TensorFlow, scikit-learn, XGBoost, LightGBM, CatBoost, SHAP, Grad-CAM, ResNet.
+- **DevOps & Tools**: Git, GitHub, Docker, Linux, Bash, VS Code, Godot Engine.
+
+## Education
+- **Bachelor of Business Computer**: Lebanese University — Faculty of Technology (Nov 2024 — Jul 2027 expected).
+- **High School Diploma**: Chouf National College (Social Studies and Economics, Jul 2024).
