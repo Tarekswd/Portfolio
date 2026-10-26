@@ -17,7 +17,8 @@ Tarek Al Ahmadieh is a full-stack software engineer, deep learning researcher, a
 - **Systems & Low-Level Programming**: Custom HTTP servers, image processing algorithms, and CLI utilities in C and Linux TCP sockets.
 
 ## Key Projects
-- **BraTS 2021 Brain Tumor Segmentation**: Foundation PyTorch/MONAI deep learning architecture surpassing benchmark standards (93.42 / 88.95 / 85.80 Dice score).
+- **BraTS 2021 Brain Tumor Segmentation**: PyTorch/MONAI 3D U-Net baseline, 5 epochs on the 1,251 training cases: 80.5 / 62.9 / 66.2 Dice (WT / TC / ET) on a 25% patient-level hold-out.
+- **BraTS 2021 MGMT Radiogenomics**: Gated-Attention MIL on pre-operative MRI, 0.566 ± 0.039 ROC-AUC in 5-fold cross-validation.
 - **Kaggle Playground S6E9 — Top 4.7%**: Ranked 167 of 3,575 predicting EV purchases using leak-free target encoding and LightGBM/CatBoost/XGBoost ensemble.
 - **Diabetic Neuropathy Classification (TogetherforChehim)**: Plantar-pressure classification using CNNs, ResNet-18 transfer learning, and Grad-CAM interpretability.
 - **MednMind Full-Stack Dashboard & Financial Reporting**: Healthcare administration platform with RBAC, revenue analytics, and patient workflows.

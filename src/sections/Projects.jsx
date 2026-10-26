@@ -82,22 +82,22 @@ const projects = [
   {
     title: "BraTS 2021 Brain Tumor Segmentation",
     category: "AI / ML",
-    outcome: "Academic research prototype evaluated on BraTS 2021 validation split",
+    outcome: "3D U-Net baseline: 80.5 / 62.9 / 66.2 Dice (WT / TC / ET) after 5 epochs",
     description:
-      "PyTorch & MONAI research implementation replicating foundation architectures (Swin UNETR & 3D U-Net) for multi-parametric MRI segmentation. Evaluated on BraTS 2021 validation split across Whole Tumor (WT), Tumor Core (TC), and Enhancing Tumor (ET) Dice similarity metrics under strict patient-level zero-leakage cross-validation.",
+      "PyTorch & MONAI pipeline for 3D multi-parametric MRI tumor segmentation, with U-Net, SegResNet and Swin UNETR implementations. Trained a 3D U-Net baseline for 5 epochs on all 1,251 BraTS 2021 training cases on a Kaggle T4 GPU, measuring Whole Tumor, Tumor Core and Enhancing Tumor Dice on a 25% patient-level hold-out.",
     tags: ["Python", "PyTorch", "MONAI", "Medical Imaging"],
     github: `${GH}/brats2021-multiparadigm-segmentation`,
     caseStudy: {
       badge: "Academic Research Prototype",
-      subtitle: "3D Foundation Swin-UNETR architecture for MRI brain tumors",
+      subtitle: "3D U-Net baseline for MRI brain tumor segmentation",
       problem:
         "Accurately segmenting 3D multi-parametric MRI modalities (T1, T1Gd, T2, FLAIR) requires capturing both global contextual relationships across brain anatomy and sharp local boundary details of infiltrative tumor sub-regions.",
       solution:
-        "Implemented a PyTorch and MONAI pipeline reproducing 3D Swin-UNETR and 3D U-Net architectures with sliding-window volumetric inference, intensity normalization, and affine data augmentations.",
+        "Built a PyTorch and MONAI pipeline with patch-based training, foreground oversampling, z-score normalization, flip/rotation augmentation, and sliding-window volumetric inference. U-Net, SegResNet and Swin UNETR are implemented; so far only the U-Net baseline has been trained on the real data.",
       tradeoff:
         "Used sliding-window 3D patch inference to handle memory-heavy 4-channel MRI volumes on consumer/academic GPUs, trading slightly longer inference latency for zero out-of-memory crashes.",
       benchmarks:
-        "Evaluated on BraTS 2021 validation split across WT, TC, and ET Dice Similarity Coefficients and 95% Hausdorff Distance (HD95) under patient-level split isolation.",
+        "Validation Dice after 5 epochs: WT 80.5%, TC 62.9%, ET 66.2% on a seeded 75/25 patient-level split of the 1,251 training cases. The model is undertrained (Dice was still rising) and well below the 2021 winning entry; per-epoch logs are on GitHub.",
       security:
         "Academic research prototype intended for reproducible benchmarking and exploratory analysis (not cleared for clinical diagnostic use).",
     },
@@ -116,9 +116,9 @@ const projects = [
   {
     title: "BraTS 2021 MGMT Radiogenomics",
     category: "AI / ML",
-    outcome: "Academic research model for pre-operative genomic prediction",
+    outcome: "Gated-Attention MIL: 0.566 ± 0.039 ROC-AUC in 5-fold cross-validation",
     description:
-      "Exploratory deep learning model predicting glioblastoma MGMT promoter methylation status from pre-operative MRI scans (BraTS Task 2). Benchmarked 3D convolutional backbones under stratified cross-validation.",
+      "Exploratory model predicting glioblastoma MGMT promoter methylation from pre-operative MRI (BraTS 2021 Task 2). A slice-based Gated-Attention MIL network reads the four DICOM sequences directly and was evaluated with 5-fold stratified, patient-level cross-validation on 582 patients. The result is only modestly above chance, in line with how hard this task is.",
     tags: ["Python", "Deep Learning", "Radiogenomics", "Medical AI"],
     github: `${GH}/brats2021-mgmt-radiogenomics`,
   },
