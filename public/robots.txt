@@ -39,4 +39,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://tatawek.com/sitemap.xml
+Sitemap: https://www.tatawek.com/sitemap.xml
