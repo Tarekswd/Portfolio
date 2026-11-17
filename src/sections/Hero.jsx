@@ -11,23 +11,23 @@ import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
   "React",
-  "Nest.js",
+  "Rust",
   "TypeScript",
-  "GraphQL",
+  "NestJS",
   "PostgreSQL",
-  "Redis",
   "Docker",
   "Tailwind CSS",
   "Prisma",
-  "Jest",
-  "GitHub Actions",
   "Python",
   "PyTorch",
   "C",
-  "Godot",
+  "C++",
+  "Post-Quantum Cryptography",
   "Machine Learning",
   "Deep Learning",
-  "X86 Assembly"
+  "X86 Assembly",
+  "Tor / Arti",
+  "Open Source",
 ];
 
 // Generated once at load so the dots don't jump on every re-render.
@@ -72,7 +72,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Full-Stack Developer • AI/ML • Systems &amp; Games
+                Full-Stack • Security • AI/ML • Open-Source
               </span>
             </div>
 
@@ -88,7 +88,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong> — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, TypeScript, Python, and C. I build scalable web systems, medical deep learning research, and published indie games.
+                Hi, I am <strong className="text-foreground font-semibold">Tarek Al Ahmadieh</strong> — a Full-Stack Developer &amp; Software Engineer specializing in React, NestJS, Rust, and C. I build scalable web systems, contribute to open-source security projects (post-quantum cryptography, fuzzing), and conduct medical deep learning research.
               </p>
             </div>
 

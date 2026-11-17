@@ -1,4 +1,4 @@
-import { Code2, Brain, Terminal, Gamepad2 } from "lucide-react";
+import { Code2, Brain, Terminal, ShieldCheck } from "lucide-react";
 
 const highlights = [
   {
@@ -8,6 +8,12 @@ const highlights = [
       "Production web apps with React, NestJS, TypeScript, Prisma ORM, and PostgreSQL. Experienced in financial engines, RBAC, and analytics dashboards.",
   },
   {
+    icon: ShieldCheck,
+    title: "Security & Open-Source",
+    description:
+      "Post-quantum cryptography (liboqs), fuzzing KEM encapsulation, memory safety auditing, and PIR-based privacy systems in Rust. Contributor to liboqs, pandas, and TraceRoot.",
+  },
+  {
     icon: Brain,
     title: "AI & Medical Deep Learning",
     description:
@@ -15,15 +21,9 @@ const highlights = [
   },
   {
     icon: Terminal,
-    title: "Systems & Low-Level C",
+    title: "Systems & Low-Level C/Rust",
     description:
-      "Linux TCP socket programming, HTTP servers built from scratch in C, image encoding, and x86 Assembly fundamentals.",
-  },
-  {
-    icon: Gamepad2,
-    title: "Indie Game Development",
-    description:
-      "Published 2D action/adventure titles built in Godot Engine and GDScript (Dereled, Runeblade, Golfyio) on itch.io.",
+      "Linux TCP socket programming, HTTP servers built from scratch in C, x86 Assembly fundamentals, and Rust for memory-safe systems and onion-service infrastructure.",
   },
 ];
 
@@ -56,13 +56,21 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200 leading-relaxed text-sm sm:text-base">
               <p>
-                I am a full-stack software engineer and machine learning researcher with over 2 years
-                of hands-on development experience. My work bridges responsive frontend architecture with
-                high-throughput backend services, robust relational database modeling, and applied deep learning.
+                I am a full-stack software engineer, security researcher, and machine learning developer
+                with a growing track record in open-source contributions and production systems.
+                My work spans responsive frontend architecture, high-throughput backend services,
+                post-quantum cryptography, and applied deep learning.
               </p>
 
               <p>
-                During my software engineering internships at <strong className="text-foreground font-semibold">MednMind</strong>,
+                As a contributor to <strong className="text-foreground font-semibold">liboqs (Open Quantum Safe)</strong>,{" "}
+                I reported unsafe memory casts in HQC code, proposed and drafted a fuzzing harness covering all 41 KEMs with 186,000+ executions and zero findings,
+                and bisected a Windows bug in <strong className="text-foreground font-semibold">pandas</strong> traced to a PyArrow regression.
+                I also reported and prepared a fix for a Slack alerting bug in <strong className="text-foreground font-semibold">TraceRoot</strong>.
+              </p>
+
+              <p>
+                During my software engineering roles at <strong className="text-foreground font-semibold">MednMind</strong>,
                 I engineered production financial settlement features, real-time cash-flow reporting, patient care workflows,
                 and role-based access control (RBAC) using <strong className="text-foreground font-semibold">React</strong>,{" "}
                 <strong className="text-foreground font-semibold">NestJS</strong>,{" "}
@@ -71,10 +79,10 @@ export const About = () => {
               </p>
 
               <p>
-                Beyond full-stack web applications, I have a deep passion for low-level systems programming in{" "}
-                <strong className="text-foreground font-semibold">C</strong>, exploratory deep learning research in medical
-                diagnostics, and designing indie game mechanics in <strong className="text-foreground font-semibold">Godot</strong>.
-                I approach every project with an emphasis on clean architecture, verifiable benchmarks, and real-world utility.
+                Beyond full-stack web applications, I build privacy-preserving systems in{" "}
+                <strong className="text-foreground font-semibold">Rust</strong> (Tor/Arti onion services, PIR), conduct deep learning research
+                in medical diagnostics, and have published indie games in <strong className="text-foreground font-semibold">Godot</strong>.
+                I approach every project with an emphasis on clean architecture, verifiable benchmarks, and real-world impact.
               </p>
 
               <p>
@@ -98,7 +106,7 @@ export const About = () => {
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-base sm:text-lg font-medium italic text-foreground">
-                "Bridging full-stack engineering with medical deep learning and systems architecture — building software that is scalable, intelligent, and crafted for real-world impact."
+                "Bridging full-stack engineering with security research, medical deep learning, and open-source contributions — building software that is scalable, intelligent, and crafted for real-world impact."
               </p>
             </div>
           </div>

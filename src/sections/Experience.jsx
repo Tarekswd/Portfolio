@@ -1,10 +1,19 @@
 const experiences = [
   {
+    period: "2026 — Present",
+    role: "Open-Source Contributor",
+    company: "liboqs · pandas · TraceRoot · OpenSSL",
+    description:
+      "liboqs: Reported unsafe uint8_t* → uint64_t* casts in HQC code (#2684), resolved upstream in HQC v5.1.0 (PR #2692). Proposed fuzzing KEM encapsulation with mutated public keys (#2687); drafted PR #2710 — harness covering all 41 KEMs with 186,000+ executions, 0 findings under OQS_STRICT_WARNINGS. pandas: Bisected a Windows rank discrepancy (#61896) to a PyArrow 21.0.0 bug fixed in 22.0.0; confirmed #59567 persists on 3.1.1. TraceRoot: Reported a Slack alert value/threshold bug (#3090) and prepared a fix with a regression test.",
+    technologies: ["Rust", "C", "liboqs", "Post-Quantum Cryptography", "Fuzzing", "Memory Safety", "pandas", "Python"],
+    current: true,
+  },
+  {
     period: "Jul 2026 — Oct 2026",
-    role: "Full Stack Developer Intern",
+    role: "Full Stack Developer",
     company: "MednMind",
     description:
-      "Developed full-stack financial features with React, NestJS, TypeScript, and PostgreSQL (commission/salary settlements, running balances, and custom income/expense tracking). Built financial and patient reporting with cash-flow analytics and configurable date-range filtering. Implemented patient management workflows, diagnosis autocomplete, medicine suggestions, RBAC access control, patient groups, and per-organization WhatsApp tracking.",
+      "Developed full-stack financial features with React, NestJS, TypeScript, and PostgreSQL (commission/salary settlements, running balances, and custom income/expense tracking). Built financial and patient reporting with cash-flow analytics and configurable date-range filtering. Developed patient management workflows (source tracking, detailed profiles, dashboard-based switching) and diagnosis/medicine autocomplete. Implemented RBAC to restrict access to sensitive medical history. Built patient groups, custom messaging, and per-organization WhatsApp tracking; fixed reminder bugs.",
     technologies: ["React", "NestJS", "TypeScript", "PostgreSQL", "Prisma ORM", "RBAC", "Reporting"],
   },
   {
@@ -68,8 +77,8 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            My internship, research, and freelance work, from full-stack
-            dashboards to medical machine learning and indie games.
+            My open-source security contributions, full-stack production systems,
+            medical machine learning research, and freelance work.
           </p>
         </div>
 

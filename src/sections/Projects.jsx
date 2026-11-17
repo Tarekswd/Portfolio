@@ -21,6 +21,29 @@ const GH = "https://github.com/Tarekswd";
 
 const projects = [
   {
+    title: "ASAC — Privacy-Preserving Search",
+    category: "Security",
+    outcome: "Onion-service search with PIR — queries hidden from honest-but-curious servers",
+    description:
+      "Open-source search system built on Tor/Arti onion services using Private Information Retrieval (PIR). Designed to keep users' queries hidden from any single honest-but-curious server under the specified PIR assumptions. Authored the threat model and security documentation, separating intended privacy properties from formally established guarantees.",
+    tags: ["Rust", "Tor", "Arti", "PIR", "Privacy", "Cryptography"],
+    github: `${GH}/ASAC`,
+    caseStudy: {
+      badge: "Security / Privacy Engineering",
+      subtitle: "PIR-backed onion-service search over Tor/Arti",
+      problem:
+        "Traditional search services expose users' queries to servers, enabling tracking and profiling. Even VPNs or Tor alone don't prevent the search server itself from learning what a user queries.",
+      solution:
+        "Built an onion-service search system in Rust using Private Information Retrieval (PIR) so the server processes queries without learning which records a user is interested in. Routes traffic through Tor/Arti to also hide the user's IP.",
+      tradeoff:
+        "PIR introduces computational overhead on the server (processing all records per query) in exchange for strong query privacy guarantees under the honest-but-curious server model.",
+      benchmarks:
+        "Architecture and threat model documented; privacy properties and their formal guarantees (and limitations) explicitly separated in the security documentation.",
+      security:
+        "Designed with an explicit threat model: protects query privacy from honest-but-curious servers; does not claim protection against fully malicious or colluding servers beyond the stated PIR assumptions.",
+    },
+  },
+  {
     title: "File Converter Platform",
     category: "Web",
     outcome: "Sub-2s conversion on standard <10MB files across 15+ formats",
@@ -215,7 +238,8 @@ export const Projects = () => {
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
             From medical-imaging AI research and Kaggle competitions to
-            full-stack web apps, indie games on itch.io and low-level C
+            full-stack web apps, security & privacy engineering (post-quantum
+            cryptography, Tor/PIR), indie games on itch.io and low-level C
             projects.
           </p>
         </header>
