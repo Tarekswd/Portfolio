@@ -1,6 +1,5 @@
 import {
   Mail,
-  Phone,
   MapPin,
   Send,
   CheckCircle,
@@ -23,12 +22,6 @@ const contactInfo = [
     label: "Email",
     value: "tarek.ahmadieh2006@gmail.com",
     href: "mailto:tarek.ahmadieh2006@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+961 76 447 535",
-    href: "tel:+96176447535",
   },
   {
     icon: MapPin,
